@@ -10,6 +10,9 @@
 		color: white;
 	}
 
+    article{
+        padding-inline: 1rem;
+    }
 
     .prose{
 		max-width: 65ch;

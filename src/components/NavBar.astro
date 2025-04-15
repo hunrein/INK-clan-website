@@ -13,6 +13,35 @@
 
 <style>
     .nav-bar-container{
+        display: none;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.575);
+        width: 100vw;
+        transition-duration: 0.2s;
+        height: 85vh;
+    }
+    .expanded{display: inline-block;}
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+        align-items:start
+        
+    }
+    .nav-bar a{
+        padding: 2rem;
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+
+
+    @media screen and (min-width: 769px ) {
+ 
+ 
+    .nav-bar-container{
         width: 100vw;
         display: contents;
         margin-bottom: 2rem;
@@ -38,5 +67,5 @@
     .nav-bar a:hover{
         color: red;
     }
-    
+}
 </style>

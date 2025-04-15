@@ -5,6 +5,7 @@ import '../css/global.css';
 const {pageTitle} = Astro.props;
 import heroImage from '../assets/skulls/skull-ink2.jpeg'
 import Footer from '../components/Footer.astro';
+import TopBar from '../components/TopBar.astro';
 ---
 
 <!doctype html>
@@ -15,15 +16,19 @@ import Footer from '../components/Footer.astro';
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-		
+		<script src="../scripts/menu.js"></script>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		
 	</head>
 	<body>
+		<TopBar/>
 		<NavBar/>
 		<div class='heroImage'>
-			<Image src={heroImage} alt={'heroImage'} />
+			<Image src={heroImage} alt={'heroImage'} class='image'
+			widths={[240, 540, 720, heroImage.width]}
+			sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${heroImage.width}px`}/>
 		</div>
 
 		<slot />
@@ -35,5 +40,12 @@ import Footer from '../components/Footer.astro';
 <style>
 	.heroImage{
 		justify-self: center;
+		
+		display: flex;
+	}
+	.image{
+		width: 100vw;
+		height: auto;
+		max-width: 450px;
 	}
 </style>
