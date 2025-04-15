@@ -33,8 +33,10 @@ const pageTitle = 'Partida paso a paso';
             <p>El servidor a utilizar siempre sera algún intermedio entre los jugadores. En caso de no encontrar un servidor en común cómodo se resolverá de la siguiente situación: El match neutral se jugara en eastus, y cada una de las partidas restantes sera en el servidor que elija cada uno de los jugadores. Ejemplo: Match neutral Eastus, Home map de jugador 1 servidor de jugador 1, Home map de jugador 2, servidor de jugador 2. Cada jugador deberá hostear su home map, y entre los dos decidirán quién hostea el primer mapa neutral.</p>
 
             <p>Para la creación de la partida se hará con la siguiente configuración: </p>
+            <div class="config-room">
+                <Image src={ConfigRoomImage} alt={'configuración de la sala'} class="image"/>
+            </div>
 
-            <Image src={ConfigRoomImage} alt={'configuración de la sala'}/>
            <h4>Valores</h4>
             <ul>
                 <li>Nombre de la sala: Liga INK</li>
@@ -67,3 +69,16 @@ const pageTitle = 'Partida paso a paso';
     </main>
 
 </Layout>
+
+<style>
+    	.config-room{
+		justify-self: center;
+		
+		display: flex;
+	}
+	.image{
+		width: 90vw;
+		height: auto;
+		max-width: 594px;
+	}
+</style>
