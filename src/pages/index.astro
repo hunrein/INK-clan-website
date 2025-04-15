@@ -1,11 +1,53 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+const pageTitle = 'INK | Incarreables';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout pageTitle={pageTitle}>
+	<main class="prose">
+		<article>
+			<h1>Liga interna INK INKarreables 2° Edición</h1>
+			<p>Les anunciamos una nueva liga interna para miembros del clan INK. Este torneo es únicamente para miembros que se encuentren dentro de la comunidad.  </p>
+
+			<h2>Objetivo</h2>
+			<p>Como objetivo estamos tratando de crear y hacer crecer una comunidad. Con la organización de esta liga y futuros torneos buscamos atraer gente que quiera participar en el clan, o gente que quiera entrar al discord para jugar y charlar sobre age.</p>
+		
+			<a href="https://discord.gg/g62t33zbUb">Canal de Discord clan INK</a>
+
+			<p>La liga está dividida en 3 categorías al igual que la primera edición.</p>
+
+			<p>En esta edición el número de mapas ascenderá a 10 y el número de jugadores por categoría se dividirán en grupos de máximo 5, por lo que si una categoría tiene 6 jugadores se formarán 2 grupos de 3, si son 12, 3 grupos de 4, y siguiendo esta lógica, se buscará la mejor distribución posible para cada caso.</p>
+			
+			<ul>
+				<li>Categoría C: elo hasta 1100 puntos</li>
+				<li>Categoría B: elo hasta 1300 puntos</li>
+				<li>Categoría A: elo desde 1300 puntos</li>
+			</ul>
+
+			<h2>Los mapas para esta edición serán:</h2>
+			<div>
+				<ul>
+					<li>Arabia</li>
+					<li>Socotra</li>
+					<li>Tormenta de polvo</li>
+					<li>Kilimanjaro</li>
+					<li>Claro africano</li>
+					<li>Terreno demencial</li>
+					<li>Valle</li>
+					<li>Serengueti</li>
+					<li>Atacama</li>
+					<li>Estepa</li>
+				</ul>
+			</div>
+
+			<h2>Sistemas de puntos</h2>
+			<p>Se dará 1 punto por partido ganado. Las series serán un PA 3 (Play all 3), es decir, se deben jugar las 3 partidas independientemente de los resultados, dando un punto por partido ganado, siendo 3 el máximo posible de puntos a ganar. </p>
+			
+			<h2>Donaciones</h2>
+			<p>También contamos con premiación en el torneo, lo cual saldría de las donaciones de cada jugador que quiera aportar. Aclaramos que la donación no es obligatoria pero en caso de poder ayudar con la cantidad que pueda aportar se agradece mucho. Solo utilizaremos PayPal como medio de recibir y entregar dinero debido a que no todos los integrantes somos del mismo país y PayPal es el único método que puede usarse internacionalmente. Para realizar una donación ponerse en contacto con Leo Prado</p>
+		</article>
+	</main>
+
 </Layout>
+

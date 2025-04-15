@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import ConfigRoomImage from '../assets/config-sala.jpg'
+const pageTitle = 'Partida paso a paso';
+---
+
+<Layout title={pageTitle}>
+    <main class="prose">
+        <article>
+            <h1>¿Cómo jugar una partida de Liga INK?</h1>
+            <p>La partida se jugará el día y hora que los jugadores hayan acordado previamente en la sala del canal de Discord del clan correspondiente a su categoría.</p>
+
+            <p>Ambos se conectarán al canal de voz de Discord del clan correspondiente a su categoría puntualmente para desarrollar el encuentro.</p>
+
+            <a href="https://discord.gg/g62t33zbUb">Canal de Discord clan INK</a>
+
+            <p>Uno de ellos se encargará de hostear el draft de mapas, primeramente, y luego el de civilizaciones en ese orden estricto. </p>
+             <ul>
+
+                <li><a href="">Draft de mapas</a></li>
+                 
+                <li><a href="">Draft de civilizaciones</a></li>
+                 
+            </ul>
+            <p>El primer mapa se define de manera aleatoria y será el primero en jugarse.</p>
+
+            <p>Cada jugador elegirá 3 mapas y al finalizar la selección cada jugador podrá banear un mapa del rival.</p>
+
+            <p>El draft de civilizaciones se comenzará con un free pick oculto y simultáneo. Luego cada jugador elegirá 5 civilizaciones. Al finalizar cada jugador podrá banear una civilización del rival.</p>
+
+            <h3>Configuración de la sala</h3>
+            <p>El servidor a utilizar siempre sera algún intermedio entre los jugadores. En caso de no encontrar un servidor en común cómodo se resolverá de la siguiente situación: El match neutral se jugara en eastus, y cada una de las partidas restantes sera en el servidor que elija cada uno de los jugadores. Ejemplo: Match neutral Eastus, Home map de jugador 1 servidor de jugador 1, Home map de jugador 2, servidor de jugador 2. Cada jugador deberá hostear su home map, y entre los dos decidirán quién hostea el primer mapa neutral.</p>
+
+            <p>Para la creación de la partida se hará con la siguiente configuración: </p>
+
+            <Image src={ConfigRoomImage} alt={'configuración de la sala'}/>
+           <h4>Valores</h4>
+            <ul>
+                <li>Nombre de la sala: Liga INK</li>
+                <li>Tipo de sala: sin posición</li>
+                <li>Visibilidad: pública</li>
+                <li>Jugadores: 2</li>
+                <li>Campaña coop: no</li>
+                <li>Escenario de evento: no</li>
+                <li>Contraseña: sin contraseña</li>
+                <li>Permitir espectadores: sí</li>
+                <li>Ocultar civilizaciones: </li>
+                <li>Retraso: 3 minutos</li>
+                <li>Servidor: según corresponda</li>
+                <li>Mod de datos:</li>
+            </ul>
+
+            <p>Se deberá permitir espectadores con un mínimo de 3 minutos de delay, ya que existe la posibilidad de que se castee la partida, o por si algún admin necesite entrar para comprobar la generación de mapa o el motivo que crea necesario revisar.</p>
+
+            <h4>Discord</h4>
+            <p>Se solicita que cuando los jugadores vayan a enfrentar su duelo se encuentren en un canal de voz de discord para evitar coaching o ayudas externas, viendo la partida como espectador.</p>
+
+            <h4>Restarts</h4>
+            <p>En cuanto a temas de restarts, se le concede un restart antes del minuto 5 a cada jugador por serie, siendo el máximo de veces a utilizar 3 por emisión. En caso de ser por un bug, mala generación de mapa, aldeanos encerrados, recursos bloqueados la cantidad de restarts es ilimitada. En caso de no estar seguros llamar a algún admin para que revise, mientras tanto seguir jugando las demás partidas</p>
+
+            <p>Al finalizar la primer partida en el mapa neutro, el siguiente mapa será elegido por el jugador que ha perdido esta partida, pudiendo optar por cualquiera de los que posee en su pool de mapas del draft. Sin importar el resultado de esta segunda partida, la tercera se jugará en un mapa seleccionado por el jugador que ganó la primer partida, pudiendo optar por cualquiera de los que posee en su pool de mapas del draft.</p>
+
+            <p> Publicar las Recs Las partidas y los drafts deben ser enviadas al canal recs respectivamente de la categoría a la que pertenezcas, es decir, si eres de la categoría A debes enviarlo a recs A. También pedimos que el resultado este en oculto, para realizar esto debe ponerse || al principio y al final del resultado. Ejemplo Jugador A ||2-1|| Jugador B</p>
+
+        </article>
+    </main>
+
+</Layout>
