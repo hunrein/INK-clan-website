@@ -1,0 +1,17 @@
+---
+const{ category } = Astro.props;
+---
+
+<h3>Categoría {category}</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Jugador 1</th>
+                <th>Resultado</th>
+                <th>Jugador 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <slot/>
+        </tbody>
+    </table>

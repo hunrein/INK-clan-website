@@ -20,7 +20,7 @@ import TopBar from '../components/TopBar.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
-		
+
 	</head>
 	<body>
 		<TopBar/>
@@ -28,7 +28,9 @@ import TopBar from '../components/TopBar.astro';
 		<div class='heroImage'>
 			<Image src={heroImage} alt={'heroImage'} class='image'
 			widths={[240, 540, 720, heroImage.width]}
-			sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${heroImage.width}px`}/>
+			sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${heroImage.width}px`}
+			loading={'eager'}
+			/>
 		</div>
 
 		<slot />

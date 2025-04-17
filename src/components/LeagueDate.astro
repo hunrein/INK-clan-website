@@ -1,0 +1,10 @@
+---
+const {date, deadline} = Astro.props;
+---
+
+
+<section>
+    <h2>{date}° Fecha</h2>
+    <p>Fecha límite: {deadline}</p>
+    <slot/>
+</section>
