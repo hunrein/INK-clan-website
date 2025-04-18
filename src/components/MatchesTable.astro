@@ -6,12 +6,30 @@ const{ category } = Astro.props;
     <table>
         <thead>
             <tr>
-                <th>Jugador 1</th>
-                <th>Resultado</th>
-                <th>Jugador 2</th>
+                <th class="right-column">Jugador 1</th>
+                <th class="center-column">Resultado</th>
+                <th class="left-column">Jugador 2</th>
             </tr>
         </thead>
         <tbody>
             <slot/>
         </tbody>
     </table>
+
+    <style>
+        table{
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        .right-column{
+            text-align: left;
+            width: 33%;
+        }
+        .left-column{
+            text-align: right;
+            width: 33%;
+        }
+        .center-column{
+            width: 34%;
+        }
+    </style>

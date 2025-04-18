@@ -3,7 +3,16 @@ const { player1, player2, result } = Astro.props;
 ---
 
 <tr>
-    <th>{player1}</th>
-    <th>{result}</th>
-    <th>{player2}</th>
+    <th class="right-column">{player1}</th>
+    <th class="center-column">{result}</th>
+    <th class="left-column">{player2}</th>
 </tr>
+
+<style>
+    .right-column{
+        text-align: left;
+    }
+    .left-column{
+        text-align: right;
+    }
+</style>

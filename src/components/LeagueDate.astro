@@ -8,3 +8,13 @@ const {date, deadline} = Astro.props;
     <p>Fecha límite: {deadline}</p>
     <slot/>
 </section>
+
+<style>
+    section{
+        margin-bottom: 3rem;
+        background-color: rgba(26, 25, 25, 0.357);
+        padding-inline: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px white;
+    }
+</style>
