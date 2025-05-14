@@ -1,0 +1,37 @@
+---
+const {category} = Astro.props;
+---
+
+
+    <h3>Categoría {category}</h3>
+    <table>
+        <thead>
+            <tr>
+                <th class="right-column">Posición</th>
+                <th class="center-column">Jugador</th>
+                <th class="left-column">Puntos</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <slot/>
+        </tbody>
+    </table>
+
+
+<style>
+    table{
+    width: 100%;
+    margin-bottom: 3rem;
+    }
+    .right-column{
+    text-align: left;
+    width: 15%;
+    }
+    .left-column{
+        text-align: right;
+         width: 15%;
+    }
+    .center-column{
+        width: 70%;
+    }
+</style>
