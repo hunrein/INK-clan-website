@@ -1,0 +1,18 @@
+---
+const {position, player, points}= Astro.props;
+---
+
+<tr>
+    <th class="right-column">{position}</th>
+    <th>{player}</th>
+    <th class="left-column">{points}</th>
+</tr>
+
+<style>
+        .right-column{
+        text-align: left;
+    }
+    .left-column{
+        text-align: right;
+    }
+</style>
