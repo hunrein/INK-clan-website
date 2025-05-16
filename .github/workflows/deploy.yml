@@ -3,7 +3,7 @@ name: Deploy Astro to VPS
 on:
   push:
     branches:
-      - main  # Cambia si tu rama principal es otra
+      - main  # Cambia si tu rama principal es otras
 
 jobs:
   deploy:
