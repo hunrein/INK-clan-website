@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           source: "dist/*"
-          target: "/var/www/liga-ink/dist"
+          target: "/var/www/INK-clan-website/dist"
