@@ -3,25 +3,34 @@ import PlayerPosition from "../components/position-table/PlayerPosition.astro";
 import PositionTable from "../components/position-table/StandTable.astro";
 import Layout from "../layouts/Layout.astro";
 const pageTitle='Tabla de posiciones'
-
+import trophyImage from '../assets/school_14935061.png';
+import { Image } from "astro:assets";
 
 ---
 <Layout pageTitle={pageTitle}>
     <article class="prose">
-
+        <h2>Campeones de la liga INK 2° edición</h2>
+        <div class="podium">
+            <h4>Categoría A</h4>
+            <Image src={trophyImage} alt={'trophy'} class={'trophy'}/> <p class="champion">INK | Condortiero</p>
+            <h4>Categoría B</h4>
+            <Image src={trophyImage} alt={'trophy'} class={'trophy'}/> <p class="champion">INK | Moqui</p>
+            <h4>Categoría C</h4>
+            <Image src={trophyImage} alt={'trophy'} class={'trophy'}/> <p class="champion">Pendiente</p>
+        </div>
         <h1>{pageTitle}</h1>
         <PositionTable category={'A'}>
-            <PlayerPosition position={1} player={'INK | Condortiero'} points={11}/>
+            <PlayerPosition position={1} player={'INK | Condortiero'} points={14}/>
             <PlayerPosition position={2} player={'INK | drakenzo'} points={10}/>
-            <PlayerPosition position={3} player={'INK | Bruce'} points={6}/>
-            <PlayerPosition position={4} player={'INK | Cure'} points={4}/>
-            <PlayerPosition position={5} player={'Ds_Le cuack'} points={3}/>
+            <PlayerPosition position={3} player={'INK | Bruce'} points={9}/>
+            <PlayerPosition position={4} player={'Ds_Le cuack'} points={6}/>
+            <PlayerPosition position={5} player={'INK | Cure'} points={4}/>
             <PlayerPosition position={6} player={'INK | C.Price'} points={2}/>
         </PositionTable>
         
         <PositionTable category={'B'}>
-            <PlayerPosition position={1} player={'INK | Lactato'} points={12}/>
-            <PlayerPosition position={2} player={'INK | Moqui'} points={12}/>
+            <PlayerPosition position={1} player={'INK | Moqui'} points={15}/>
+            <PlayerPosition position={2} player={'INK | Lactato'} points={12}/>
             <PlayerPosition position={3} player={'INK | PacheMachado'} points={7}/><!--  -->
             <PlayerPosition position={4} player={'INK | Rhino'} points={6}/><!--  -->
             <PlayerPosition position={5} player={'INK | Sr.Piero'} points={5}/>
@@ -29,13 +38,28 @@ const pageTitle='Tabla de posiciones'
         </PositionTable>
         
         <PositionTable category={'C'}>
-            <PlayerPosition position={1} player={'INK | Hunrein'} points={8}/>
-            <PlayerPosition position={2} player={'Quitogermano'} points={7}/>
-            <PlayerPosition position={3} player={'INK | Rutsor'} points={6}/>
-            <PlayerPosition position={4} player={'INK | ZEK0'} points={3}/>
+            <PlayerPosition position={1} player={'INK | Hunrein'} points={10}/>
+            <PlayerPosition position={1} player={'Quitogermano'} points={10}/>
+            <PlayerPosition position={2} player={'INK | Rutsor'} points={9}/>
+            <PlayerPosition position={3} player={'INK | ZEK0'} points={4}/>
             <PlayerPosition position={4} player={'Oskarp'} points={3}/>
             <PlayerPosition position={5} player={'INK | Jimmbar'} points={0}/>
         </PositionTable>
     </article>
 
 </Layout>
+
+<style>
+    .podium{
+        margin-bottom: 4rem;
+    }
+    .champion{
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .trophy{
+        width: 50px;
+        height: auto;
+        vertical-align: middle;
+    }
+</style>
